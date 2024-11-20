@@ -1,4 +1,5 @@
-! Ataur Rahman
+! Last Updated on 19th Nov.
+! By Ataur Rahman
 ! M.Sc. Physics (Computational Physics)
 ! Central University of Punjab, Bathinda
 
@@ -7,19 +8,19 @@ use xfind
 implicit none
 
 
-integer :: i,n
-real::a1,a2,err,rt
+integer :: i, n
+real :: a1, a2, err, rt
   
-  !write(*,*)" Enter the function:"
-  !read(*,*)
+  ! write(*, *) " Enter the function:"
+  ! read(*, *)
   
-  write(*,*)" Enter a integer for the following methods: "
-  write(*,*)" Bisection method:      1"
-  write(*,*)" Newton-raphson method: 2"
-  write(*,*)" Regula-falsi method:   3"
-  write(*,*)" Secant method:         4"
-  write(*,*)"------------------------------------------------------------------------------"
-  read(*,*)i
+  write(*, *) " Enter a number to choose a method: "
+  write(*, *) " Bisection method:      1"
+  write(*, *) " Newton-Raphson method: 2"
+  write(*, *) " Regula-Falsi method:   3"
+  write(*, *) " Secant method:         4"
+  write(*, *) "------------------------------------------------------------------------------"
+  read(*, *) i
   
   select case(i)
   case (1)
@@ -33,13 +34,10 @@ real::a1,a2,err,rt
         
   
   case default
-        write(*,*)"Write a valid no."
+        write(*, *) "Enter a valid number."  
+        write(*, *) "------------------------------------------------------------------------------"
   
   end select
   
 
 end program main
-
-!we need to run both the module and the main program togetherly using the command
-!gfortran -o find xfind.f90 main.f90
-! run the ./find to execute the output.
